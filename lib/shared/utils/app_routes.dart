@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gamehub/features/game/brick/presentation/pages/brick_page.dart';
 import 'package:gamehub/features/game/flappy/presentation/pages/flappy_bird_page.dart';
 import 'package:gamehub/features/home/presentation/pages/home_page.dart';
 import 'package:gamehub/themes/app_text_style.dart';
@@ -6,13 +7,16 @@ import 'package:gamehub/themes/app_text_style.dart';
 class AppRoutes{
   static const home = '/home';
   static const flappy = '/flappy';
+  static const brick = '/brick';
 
   static Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
     switch(settings.name) {
       case home:
         return _pageRouteBuilder(page: const HomePage());
       case flappy:
-        return _pageRouteBuilder(page: FlappyBirdPage());
+        return _pageRouteBuilder(page: const FlappyBirdPage());
+      case brick:
+        return _pageRouteBuilder(page: const BrickPage());
       default:
         return _pageRouteBuilder(
           page: Scaffold(

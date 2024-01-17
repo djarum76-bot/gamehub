@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:gamehub/shared/extensions/media_query_extension.dart';
-import 'package:gamehub/shared/utils/app_icons.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LauncherButton extends StatelessWidget{
-  const LauncherButton({super.key, required this.page, required this.color, required this.name});
+  const LauncherButton({super.key, required this.page, required this.color, required this.name, this.icon});
 
   final String page;
   final Color color;
   final String name;
+  final String? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +30,13 @@ class LauncherButton extends StatelessWidget{
                     color: color,
                     borderRadius: BorderRadius.circular(12)
                 ),
-                child: Image.asset(AppIcons.flappy),
+                padding: EdgeInsets.symmetric(vertical: 1.h),
+                child: icon == null ? const FlutterLogo() : Image.asset(icon!),
               ),
               Gap(0.5.h),
               Text(
                 name,
-                style: GoogleFonts.poppins(fontSize: 11.sp),
+                style: GoogleFonts.poppins(fontSize: 11.sp, color: Colors.white),
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,

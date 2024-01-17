@@ -43,6 +43,7 @@ dependencies:
   get_it: ^7.6.6
   line_icons: ^2.0.3
   gap: ^3.0.1
+  flutter_animate: ^4.4.0
 
 dev_dependencies:
   flutter_test:

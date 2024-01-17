@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /// `_AppColorPalette` is collection of the app colors. It defines
 /// as abstract class because we don't need to instantiate it.
@@ -196,6 +197,10 @@ class AppTheme {
     scaffoldBackgroundColor: _AppColorPalette.background,
     extensions: [_darkAppColors],
     appBarTheme: const AppBarTheme(color: _AppColorPalette.background),
+    textTheme: GoogleFonts.pressStart2pTextTheme().apply(
+      bodyColor: const Color(0xff184e77),
+      displayColor: const Color(0xff184e77),
+    )
   );
 
   static final AppColorsExtension _darkAppColors = AppColorsExtension(

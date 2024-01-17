@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gamehub/features/home/presentation/widgets/launcher_button.dart';
+import 'package:gamehub/shared/utils/app_icons.dart';
 import 'package:gamehub/shared/utils/app_routes.dart';
 
 class HomePage extends StatelessWidget{
@@ -19,7 +20,8 @@ class HomePage extends StatelessWidget{
         height: double.infinity,
         child: Wrap(
           children: [
-            LauncherButton(page: AppRoutes.flappy, color: Colors.amber, name: "Flappy Bird"),
+            LauncherButton(page: AppRoutes.flappy, color: Colors.amber, name: "Flappy Bird", icon: AppIcons.flappy,),
+            LauncherButton(page: AppRoutes.brick, color: Colors.red, name: "Brick"),
           ],
         ),
       ),
