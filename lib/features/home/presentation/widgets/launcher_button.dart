@@ -5,9 +5,9 @@ import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LauncherButton extends StatelessWidget{
-  const LauncherButton({super.key, required this.onTap, required this.color, required this.name});
+  const LauncherButton({super.key, required this.page, required this.color, required this.name});
 
-  final void Function() onTap;
+  final String page;
   final Color color;
   final String name;
 
@@ -16,7 +16,7 @@ class LauncherButton extends StatelessWidget{
     return Container(
       padding: EdgeInsets.fromLTRB(3.w, 3.h, 0, 0),
       child: GestureDetector(
-        onTap: onTap,
+        onTap: () => Navigator.pushNamed(context, page),
         child: SizedBox(
           width: 16.25.w,
           child: Column(

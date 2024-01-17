@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gamehub/features/home/presentation/widgets/launcher_button.dart';
+import 'package:gamehub/shared/utils/app_routes.dart';
 
 class HomePage extends StatelessWidget{
   const HomePage({super.key});
@@ -12,13 +13,13 @@ class HomePage extends StatelessWidget{
   }
 
   Widget _homeBody(BuildContext context){
-    return SafeArea(
+    return const SafeArea(
       child: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: Wrap(
           children: [
-            LauncherButton(onTap: (){}, color: Colors.amber, name: "Flappy Bird"),
+            LauncherButton(page: AppRoutes.flappy, color: Colors.amber, name: "Flappy Bird"),
           ],
         ),
       ),
